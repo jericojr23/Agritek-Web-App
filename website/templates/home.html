@@ -1,8 +1,17 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
 <h1 align="center">Agritek</h1>
-<center><form class=”form-inline” action = “/predict” method = “post” enctype=”multipart/form-data”>
-  <input type=”file” name=”file”/><br>
-  <input type = “submit” class=”btn btn-success” value=”Predict”>
-  </form></center>
+  <center>
+	<form method="post" action="/upload" enctype="multipart/form-data">
+		<div class="form-group">
+			<label for="img">Image</label>
+			<input type="file" class="form-control-file" name="img" accept="image/*" id="img"  aria-describedby="fileHelpId">
+			<small id="fileHelpId" class="form-text text-muted">Select Image</small>
+		</div>
+
+		<input type="submit" value="Submit" class="btn btn-primary">
+
+	</form></center>
+
+  <<h1 class="display-2">
 {% endblock %}
