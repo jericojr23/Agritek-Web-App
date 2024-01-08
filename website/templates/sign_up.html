@@ -1,7 +1,9 @@
 {% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
 content %}
 <form method="POST">
+  <img src="{{ url_for('static', filename='logo-1.png') }}" alt="Logo" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
   <h3 align="center">Sign Up</h3>
+  <div class="container" style="width: 100%; max-width: 500px; border: 1px solid #ccc; border-radius: 16px; padding: 24px; margin-bottom: 80px;">
   <div class="form-group">
     <label for="email">Email Address</label>
     <input
@@ -43,6 +45,7 @@ content %}
     />
   </div>
   <br />
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <center><button type="submit" class="btn btn-primary" style="width: 100%; max-width: 180px; border: 1px solid #094a07; background-color: #094a07;">Submit</button></center>
+</div>
 </form>
 {% endblock %}

@@ -1,17 +1,31 @@
-{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
-%}
-<img src="{{ url_for('static', filename='logo-5.png') }}" alt="Header image" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-  <center>
-	<form method="post" action="/upload" enctype="multipart/form-data">
-		<div class="form-group" style="width: 100%; max-width: 500px;">
-			<label for="img">Image</label>
-			<input type="file" class="form-control-file" name="img" accept="image/*" id="img"  aria-describedby="fileHelpId">
-			<small id="fileHelpId" class="form-text text-muted">Select Image</small>
-		</div>
+{% extends "base.html" %}
 
-		<input type="submit" value="Submit" class="btn btn-primary">
+{% block title %}Home{% endblock %}
 
-	</form></center>
+{% block content %}
+<img src="{{ url_for('static', filename='logo-5.png') }}" alt="Header image" style="width: 100%; max-width: 400px; margin: 0 auto; display: block; ">
 
-  <<h1 class="display-2">
+<div style="display: flex; justify-content: space-around; align-items: center; margin-bottom: 80px;">
+
+  <!-- Left side: Image Upload -->
+  <div style="flex: 1; margin-right: 20px;">
+    <center>
+      <form method="post" action="/upload" enctype="multipart/form-data">
+        <div class="form-group" style="width: 100%; max-width: 500px;">
+          <label for="img">Image</label>
+          <input type="file" class="form-control-file" name="img" accept="image/*" id="img" aria-describedby="fileHelpId" style="width: 100%; max-width: 250px;">
+          <small id="fileHelpId" class="form-text text-muted">Select Image</small>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary">
+      </form>
+    </center>
+  </div>
+
+  <!-- Right side: Results Section with border -->
+  <div style="flex: 1; border: 1px solid #ccc; border-radius: 16px; padding-left: 20px;">
+    <h1 class="display-2" style="color: #333; font-size: 24px; height: 100%; min-height: 360px; padding: 8px;">Results</h1>
+    <!-- Add content to display results here -->
+  </div>
+
+</div>
 {% endblock %}
