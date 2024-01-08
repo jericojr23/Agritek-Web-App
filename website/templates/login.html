@@ -3,27 +3,30 @@
 <form method="POST">
   <img src="{{ url_for('static', filename='logo-1.png') }}" alt="Logo" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
   <h3 align="center">Login</h3>
-  <div class="form-group">
-    <label for="email">Email Address</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      placeholder="Enter email"
-    />
+  <div class="container" style="width: 100%; max-width: 500px; border: 1px solid #ccc; border-radius: 16px; padding: 24px">
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+      />
+    </div>
+    <br />
+    <center><button type="submit" class="btn btn-primary"  style="width: 100%; max-width: 180px; border: 1px solid #094a07; background-color: #094a07;">Login</button></center>
   </div>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input
-      type="password"
-      class="form-control"
-      id="password"
-      name="password"
-      placeholder="Enter password"
-    />
-  </div>
-  <br />
-  <button type="submit" class="btn btn-primary">Login</button>
+
 </form>
 {% endblock %}
