@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
-<h1 align="center">Agritek</h1>
+<img src="{{ url_for('static', filename='logo-5.png') }}" alt="Header image" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
   <center>
 	<form method="post" action="/upload" enctype="multipart/form-data">
-		<div class="form-group">
+		<div class="form-group" style="width: 100%; max-width: 500px;">
 			<label for="img">Image</label>
 			<input type="file" class="form-control-file" name="img" accept="image/*" id="img"  aria-describedby="fileHelpId">
 			<small id="fileHelpId" class="form-text text-muted">Select Image</small>
